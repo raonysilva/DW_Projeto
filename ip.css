@@ -1,0 +1,69 @@
+ body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+            
+        }
+        .layout{
+            color: white;
+            position: relative;
+            top: 60px;
+            left: 850px;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 1200px;
+        }
+        .box{
+            color: white;
+            position: relative;
+            top: 300px;
+            left: 500px;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 350px;
+        }
+        .mapa{
+            color: white;
+            position: relative;
+            top: 180px;
+            left: 1100px;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 630px;
+        }
+        
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        fieldset{
+            border: 3px solid dodgerblue;
+        }
+        label{
+          
+            padding: 110px;
+            text-align: center;
+            
+        }
+        #submit{
+            background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+            width: 100%;
+            border: none;
+            padding: 10px;
+            color: white;
+            font-size: 15vpx;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+     
