@@ -17,7 +17,7 @@
         .box{
             color: white;
             position: relative;
-            top: 300px;
+            top: 50px;
             left: 500px;
             transform: translate(-50%,-50%);
             background-color: rgba(0, 0, 0, 0.6);
@@ -28,7 +28,7 @@
         .mapa{
             color: white;
             position: relative;
-            top: 180px;
+            top: 50px;
             left: 1100px;
             transform: translate(-50%,-50%);
             background-color: rgba(0, 0, 0, 0.6);
@@ -36,6 +36,17 @@
             border-radius: 15px;
             width: 630px;
         }
+        .resultado{
+            color: white;
+            position: relative;
+            top: 350px;
+            left: 500px;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 350px;
+        }      
         
         .inputUser{
             background: none;
@@ -66,6 +77,8 @@
             cursor: pointer;
             border-radius: 10px;
         }
-       h3{
+
+        h3{
             font-size: 13px;
          }
+     
