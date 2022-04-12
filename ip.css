@@ -5,47 +5,47 @@
         }
         .layout{
             color: white;
-            position: relative;
-            top: 60px;
-            left: 850px;
+            position: absolute;
+            top: 10%;
+            left: 50%;
             transform: translate(-50%,-50%);
             background-color: rgba(0, 0, 0, 0.6);
             padding: 15px;
             border-radius: 15px;
-            width: 1200px;
+            width: 80%;
         }
         .box{
             color: white;
-            position: relative;
-            top: 50px;
-            left: 500px;
+            position: absolute;
+            top: 35%;
+            left: 25%;
             transform: translate(-50%,-50%);
             background-color: rgba(0, 0, 0, 0.6);
             padding: 15px;
             border-radius: 15px;
-            width: 350px;
+            width: 20%;
         }
         .mapa{
             color: white;
-            position: relative;
-            top: 50px;
-            left: 1100px;
+            position: absolute;
+            top: 57%;
+            left: 68%;
             transform: translate(-50%,-50%);
             background-color: rgba(0, 0, 0, 0.6);
             padding: 15px;
             border-radius: 15px;
-            width: 630px;
+            width: 37%;
         }
         .resultado{
             color: white;
-            position: relative;
-            top: 300px;
-            left: 500px;
+            position: absolute;
+            top: 65%;
+            left: 25%;
             transform: translate(-50%,-50%);
             background-color: rgba(0, 0, 0, 0.6);
             padding: 15px;
             border-radius: 15px;
-            width: 350px;
+            width: 20%;
         }      
         
         .inputUser{
@@ -71,6 +71,20 @@
         #submit{
             background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
             width: 100%;
+            border: none;
+            padding: 10px;
+            color: white;
+            font-size: 15vpx;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        #pagina2{
+            background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+            width: 10%;
+            position: absolute;
+            top: 93%;
+            left: 38%;
             border: none;
             padding: 10px;
             color: white;
