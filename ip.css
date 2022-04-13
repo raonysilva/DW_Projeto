@@ -84,10 +84,11 @@
             background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
             width: 10%;
             position: absolute;
-            top: 93%;
-            left: 38%;
+            top: 95%;
+            left: 50%;
             border: none;
             padding: 10px;
+            transform: translate(-50%,-50%);
             color: white;
             font-size: 15vpx;
             cursor: pointer;
