@@ -18,7 +18,7 @@ $(function() {
 })
 
 function buscarip() {
-     
+    // document.getElementById("saida").value= " ";
      $.getJSON("http://ip-api.com/json/"+document.getElementById("nome").value+"?lang=pt-BR&fields=message,continent,country,region,regionName,city,isp,org,lat,lon,query",
         function(dados2) {
              $.each(dados2,function(r,a,){
@@ -34,6 +34,24 @@ function buscarip() {
      
 
 }
+
+const getElement = (...queries) => document.querySelector(...queries);
+
+const button = getElement('.open-modal-button');
+const container = getElement('.modal-container');
+const modal = getElement('.modal');
+
+const activeModalClass = 'modal-show';
+
+const openModal = () => container.classList.add(activeModalClass);
+const closeModal = () => container.classList.remove(activeModalClass);
+
+button.addEventListener('click', openModal);
+container.addEventListener('click', (event) => {
+	if (modal.contains(event.target)) return;
+	
+	closeModal();
+});
 
 
 
