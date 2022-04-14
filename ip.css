@@ -69,7 +69,7 @@
             text-align: center;
             
         }
-        #submit{
+        #buscar{
             background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
             width: 100%;
             border: none;
@@ -78,6 +78,8 @@
             font-size: 15vpx;
             cursor: pointer;
             border-radius: 10px;
+            font-weight: bold;
+
         }
 
         #pagina2{
@@ -93,6 +95,8 @@
             font-size: 15vpx;
             cursor: pointer;
             border-radius: 10px;
+            font-weight: bold;
+
         }
 
         h3{

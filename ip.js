@@ -1,5 +1,3 @@
-var ips = document.getElementById("nome");
-document.getElementById("submit").addEventListener("click",buscarip );
 
 $(function() {
      $.getJSON("http://ip-api.com/json/?fields=message,continent,country,region,regionName,city,isp,org,query",
@@ -20,7 +18,8 @@ $(function() {
 })
 
 function buscarip() {
-     $.getJSON("http://ip-api.com/json/?lang=pt-BR&fields=message,continent,country,region,regionName,city,isp,org,lat,lon,query",
+     
+     $.getJSON("http://ip-api.com/json/"+document.getElementById("nome").value+"?lang=pt-BR&fields=message,continent,country,region,regionName,city,isp,org,lat,lon,query",
         function(dados2) {
              $.each(dados2,function(r,a,){
                
