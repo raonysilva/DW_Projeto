@@ -23,7 +23,7 @@ function buscarip() {
         function(dados2) {
              $.each(dados2,function(r,a,){
                
-               $("h4").append("<tr><td>"+r+"</td><td>"+a+"</td></tr>");
+               $(document.getElementById("saida")).append("<tr><td>"+r+"</td><td>"+a+"</td></tr>");
                
 
 
