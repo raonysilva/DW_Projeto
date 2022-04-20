@@ -17,8 +17,12 @@ $(function() {
 
 })
 
+
 function buscarip() {
-    // document.getElementById("saida").value= " ";
+     $("#buscar").click(function(){
+          $('#saida').html("");
+     });
+
      $.getJSON("http://ip-api.com/json/"+document.getElementById("nome").value+"?lang=pt-BR&fields=message,continent,country,region,regionName,city,isp,org,lat,lon,query",
         function(dados2) {
              $.each(dados2,function(r,a,){
@@ -30,7 +34,8 @@ function buscarip() {
           });
 
      });
-     
+
+     //document.getElementById("saida").value= " ";
      
 
 }
