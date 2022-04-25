@@ -4,7 +4,7 @@ $(function() {
         function(dados) {
              $.each(dados,function(p,s,){
                
-               $("h3").append("<td>&nbsp" +s+ " &nbsp</td>");           
+               $(document.getElementById("meuip")).append("<td>&nbsp" +s+ " &nbsp</td>");           
 
 
           });
