@@ -1,3 +1,15 @@
+var lat =0;
+var long =0;
+var map = L.map('map').setView([lat, long], 1);
+
+var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+     maxZoom: 18,
+     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+          'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+     id: 'mapbox/streets-v11',
+     tileSize: 512,
+     zoomOffset: -1
+}).addTo(map);
 
 $(function() {
      $.getJSON("http://ip-api.com/json/?fields=message,continent,country,region,regionName,city,isp,org,query",
@@ -27,8 +39,8 @@ function buscarip() {
              $.each(dados2,function(r,a,){
                
                $(document.getElementById("saida")).append("<tr><td>"+r+"</td><td>"+a+"</td></tr>");
-
                
+
           });
 
      });
@@ -50,16 +62,21 @@ function buscarip() {
           $.each(dados4,function(p,q){
                long = q; 
                
+
           });  
                  
-         
 
+          
      });
 
-     document.getElementsByName("mapa").src = "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15833.207449695528!2d-34.85136865!3d-7.2063619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1650545403294!5m2!1spt-BR!2sbr";  
-     
+     var marker = L.marker([lat,long]).addTo(map);
+     marker.bindPopup("<b>"+document.getElementById("nome").value+"</b><br>Estar Aproximadamente !<br>Aqui").openPopup();
+
+
+
 
 }
+
 
 const getElement = (...queries) => document.querySelector(...queries);
 
