@@ -44,9 +44,6 @@ function buscarip() {
                                    $.each(dados2,function(r,a,){
                          
                                         $(document.getElementById("saida")).append("<tr><td>"+r+"</td><td>"+a+"</td></tr>");
-                                        var marker = L.marker([lat,long]).addTo(map);
-                                        marker.bindPopup("<b>"+document.getElementById("nome").value+"</b><br>Estar Aproximadamente !<br>Aqui").openPopup();
-               
                          
                                    });
                               }
@@ -72,6 +69,8 @@ function buscarip() {
                               }
                          );
           
+                         var marker = L.marker([lat,long]).addTo(map);
+                         marker.bindPopup("<b>"+document.getElementById("nome").value+"</b><br>Estar Aproximadamente !<br>Aqui").openPopup();
                     }
                     
                     else{
