@@ -1,5 +1,3 @@
-var lat =0;
-var long =0;
 var map = L.map('map').setView([0, 0], 1);
 
      var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -24,57 +22,67 @@ $(function() {
 
      });
   
-     
-
 })
 
 
 function buscarip() {
-     
+
      $("#buscar").click(function(){
           $('#saida').html("");
      });
      
-     $.getJSON("http://ip-api.com/json/"+document.getElementById("nome").value+"?lang=pt-BR&fields=message,continent,country,region,regionName,city,isp,org,lat,lon,query",
-        function(dados2) {
-             $.each(dados2,function(r,a,){
-               
-               $(document.getElementById("saida")).append("<tr><td>"+r+"</td><td>"+a+"</td></tr>");
-               
-
-          });
-
-     });
-
-     $.getJSON("http://ip-api.com/json/"+document.getElementById("nome").value+"?lang=pt-BR&fields=lat",
-        function(dados3) {
-          
-          $.each(dados3,function(j,f){
-               lat = f;
-                    
-
-          });
-                        
-
-     });
-
-     $.getJSON("http://ip-api.com/json/"+document.getElementById("nome").value+"?lang=pt-BR&fields=lon",
-        function(dados4) {
-          $.each(dados4,function(p,q){
-               long = q; 
-               
-               var marker = L.marker([lat,long]).addTo(map);
-               marker.bindPopup("<b>"+document.getElementById("nome").value+"</b><br>Estar Aproximadamente !<br>Aqui").openPopup();
-          });  
-                 
-
-          
-     });
 
      
+     $.getJSON("http://ip-api.com/json/"+document.getElementById("nome").value+"?lang=pt-BR&fields=status",
+          function(dados0) {
+               $.each(dados0,function(k,m){
+                    success = m; 
+                    if (success =="success"){
+                         
+                         $.getJSON("http://ip-api.com/json/"+document.getElementById("nome").value+"?lang=pt-BR&fields=message,continent,country,region,regionName,city,isp,org,lat,lon,query",
+                              function(dados2) {
+                                   $.each(dados2,function(r,a,){
+                         
+                                        $(document.getElementById("saida")).append("<tr><td>"+r+"</td><td>"+a+"</td></tr>");
+                                        var marker = L.marker([lat,long]).addTo(map);
+                                        marker.bindPopup("<b>"+document.getElementById("nome").value+"</b><br>Estar Aproximadamente !<br>Aqui").openPopup();
+               
+                         
+                                   });
+                              }
+                         );
+          
+                         $.getJSON("http://ip-api.com/json/"+document.getElementById("nome").value+"?lang=pt-BR&fields=lat",
+                              function(dados3) {
+                                   $.each(dados3,function(j,f){
+                                        lat = f;
+                                   
+                              
+                                   });  
+          
+                              }
+                         );
+          
+                         $.getJSON("http://ip-api.com/json/"+document.getElementById("nome").value+"?lang=pt-BR&fields=lon",
+                              function(dados4) {
+                                   $.each(dados4,function(p,q){
+                                        long = q; 
+                                   
+                                   });        
+                              }
+                         );
+          
+                    }
+                    
+                    else{
+                         
+                         $(document.getElementById("saida")).append("IP Nao Localizado");
+                   
+                    }                
 
-
-
+               });
+          }
+     );               
 
 }
 
