@@ -8,7 +8,17 @@ var map = L.map('map').setView([0, 0], 1);
           tileSize: 512,
           zoomOffset: -1
      }).addTo(map);
+     
+var popup = L.popup();
 
+function onMapClick(e) {
+     popup
+          .setLatLng(e.latlng)
+          .setContent("Localização: " + e.latlng.toString())
+          .openOn(map);
+}
+     
+map.on('click', onMapClick);
 
 $(function() {
      $.getJSON("http://ip-api.com/json/?fields=message,continent,country,region,regionName,city,isp,org,query",
@@ -69,8 +79,7 @@ function buscarip() {
                               }
                          );
           
-                         var marker = L.marker([lat,long]).addTo(map);
-                         marker.bindPopup("<b>"+document.getElementById("nome").value+"</b><br>Estar Aproximadamente !<br>Aqui").openPopup();
+                         
                     }
                     
                     else{
@@ -82,6 +91,8 @@ function buscarip() {
                });
           }
      );               
+     var marker = L.marker([lat,long]).addTo(map);
+     marker.bindPopup("<b>"+document.getElementById("nome").value+"</b><br>Estar Aproximadamente !<br>Aqui").openPopup();
 
 }
 
