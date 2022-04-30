@@ -1,4 +1,4 @@
-var map = L.map('map').setView([0, 0], 1);
+var map = L.map('map').setView([0, 0], 2);
 
      var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
           maxZoom: 18,
@@ -17,7 +17,6 @@ function onMapClick(e) {
           .setContent("Localização: " + e.latlng.toString())
           .openOn(map);
 }
-     
 map.on('click', onMapClick);
 
 $(function() {
@@ -45,10 +44,10 @@ function buscarip() {
      
      $.getJSON("http://ip-api.com/json/"+document.getElementById("nome").value+"?lang=pt-BR&fields=status",
           function(dados0) {
+               
                $.each(dados0,function(k,m){
-                    success = m; 
-                    if (success =="success"){
-                         
+                    
+                    if (m =="success"){
                          $.getJSON("http://ip-api.com/json/"+document.getElementById("nome").value+"?lang=pt-BR&fields=message,continent,country,region,regionName,city,isp,org,lat,lon,query",
                               function(dados2) {
                                    $.each(dados2,function(r,a,){
@@ -78,7 +77,8 @@ function buscarip() {
                                    });        
                               }
                          );
-          
+                         var marker = L.marker([lat,long]).addTo(map);
+                         marker.bindPopup("<b><n>"+document.getElementById("nome").value+"</b></n><br>Estar Aproximadamente !<br>Aqui").openPopup();
                          
                     }
                     
@@ -91,15 +91,13 @@ function buscarip() {
                });
           }
      );               
-     var marker = L.marker([lat,long]).addTo(map);
-     marker.bindPopup("<b>"+document.getElementById("nome").value+"</b><br>Estar Aproximadamente !<br>Aqui").openPopup();
 
 }
 
 
 const getElement = (...queries) => document.querySelector(...queries);
 
-const button = getElement('.open-modal-button');
+const button = getElement('.open-modal');
 const container = getElement('.modal-container');
 const modal = getElement('.modal');
 
