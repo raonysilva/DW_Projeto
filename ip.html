@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocalizacao</title>
+    <link rel="stylesheet" href="css/ip.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/ip.js" defer></script>
+
+</head>
+<body>
+    <div class="layout">
+        <form action="">
+            <fieldset>
+                <legend><b>Meu IP</b></legend>
+                <br>
+                <div id="meuip" align="center"></div>
+            </fieldset>
+        </form>
+    </div>
+        
+    <div class="resultado">
+        <form action="">
+            <fieldset>
+                   <legend><b>Busca IP</b></legend>
+                    <br>
+                    <div id="saida"></div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>IP Localização</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" placeholder="192.168.0.1" required="Digite o IP">
+                    <label for="nome" class="labelInput">Digite o IP</label>
+                </div>
+                <br>
+                <input type="button" name="button" id="buscar" class="buscar" value="Buscar" onclick="buscarip()">
+            </fieldset>
+        </form>   
+    </div>
+
+    <div class="mapa">
+        <form action="">
+            <fieldset>
+                <legend><b>Mapa</b></legend>
+                <br>
+                <div id="map"></div>
+            </fieldset>
+        </form>    
+    </div>   
+    
+    <div class="modal-container">
+        <div class="modal">
+          <p>
+            <div align="center"> <iframe id="teste" name="Teste de Velocidade da Internet" height="280" width="500" scrolling="no" frameborder="0" src="https://fast.com/pt/"></iframe><br /></div>
+          </p>
+        </div>
+    </div>
+      
+    <input type="button" name="nome" id="modalbt" class="open-modal" value="Teste Sua Velocidade">
+        
+
+</body>
+</html>

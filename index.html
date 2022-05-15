@@ -1,77 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geolocalizacao</title>
-    <link rel="stylesheet" href="ip.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
-    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
-    crossorigin=""></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="ip.js" defer></script>
+	<title>Formulário</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 
 </head>
 <body>
-    <div class="layout">
-        <form action="">
-            <fieldset>
-                <legend><b>Meu IP</b></legend>
-                <br>
-                <div id="meuip" align="center"></div>
-            </fieldset>
-        </form>
-    </div>
-        
-    <div class="resultado">
-        <form action="">
-            <fieldset>
-                   <legend><b>Busca IP</b></legend>
-                    <br>
-                    <div id="saida"></div>
-            </fieldset>
-        </form>
-    </div>
 
-    <div class="box">
-        <form action="">
-            <fieldset>
-                <legend><b>IP Localização</b></legend>
-                <br>
-                <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" placeholder="192.168.0.1" required="Digite o IP">
-                    <label for="nome" class="labelInput">Digite o IP</label>
-                </div>
-                <br>
-                <input type="button" name="button" id="buscar" class="buscar" value="Buscar" onclick="buscarip()">
-            </fieldset>
-        </form>   
-    </div>
+<div class="container-fluid">
+	<div class="row justify-content-center mt-5">
+		<section class="col-12 colsm-6 col-md-4">
+			<img src="img/user4.png" class="bg">
+			<form class="form-container">
+				<h4 class="text-center mt-4">Login</h4>
+				<div class="form-group">
+					<input type="text"  class="form-control" name="nome" placeholder="Email">
+				</div>
+				
+				<div class="form-group">
+					<input type="password" class="form-control" name="senha" placeholder="Senha">
+				</div>
+				
+				<div class="form-group form-check">
+					<input type="checkbox" class="form-check-input" name="">
+					<label class="form-check-label">Lembre-me</label>
+                    <a href="url">Esqueceu Senha</a>
 
-    <div class="mapa">
-        <form action="">
-            <fieldset>
-                <legend><b>Mapa</b></legend>
-                <br>
-                <div id="map"></div>
-            </fieldset>
-        </form>    
-    </div>   
-    
-    <div class="modal-container">
-        <div class="modal">
-          <p>
-            <div align="center"> <iframe id="teste" name="Teste de Velocidade da Internet" height="280" width="500" scrolling="no" frameborder="0" src="https://fast.com/pt/"></iframe><br /></div>
-          </p>
-        </div>
-    </div>
-      
-    <input type="button" name="nome" id="modalbt" class="open-modal" value="Teste Sua Velocidade">
-        
+				</div>
+				<button class="btn btn-primary btn-block">Entrar</button>
+                <button class="btn btn-primary btn-block">Cadastrar</button>
+
+			</form>
+		</section>
+	</div>
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 </html>

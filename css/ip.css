@@ -1,0 +1,163 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+}
+
+.layout{
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.box{
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    width: 20%;
+}
+
+.mapa{
+    color: white;
+    position: absolute;
+    top: 57%;
+    left: 68%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    width: 37%;
+}
+
+.resultado{
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    width: 20%;
+}           
+
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+fieldset{
+    border: 3px solid dodgerblue;
+}
+                
+label{       
+    padding: 110px;
+    text-align: center;
+            
+}
+
+#buscar{
+    position: relative;
+    background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+    width: 100%;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 15vpx;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.buscar:hover {
+    padding: 0em 1em;
+    width: 5%;
+    height: 5%;
+    font-size:80%;
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    transform: translateY(-15%);
+}
+  
+.open-modal:hover {
+    padding: 0em 1em;
+    width: 5%;
+    height: 5%;
+    font-size:80%;
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    transform: translateY(-15%);
+}
+
+
+#map { height: 450px; }
+
+#modalbt{
+    background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+    width: 10%;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    border: none;
+    padding: 10px;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 15vpx;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.modal-container {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100vh;       
+    position: fixed;
+    left: 0;
+    top: 0;        
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+}
+          
+.modal {
+    background: #fff;        
+    width: 0;
+    height: 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #00000070;     
+    overflow: hidden;        
+    transition: width 0.15s, height 0.15s;
+}
+          
+.modal-show > .modal {
+    width: 500px;
+    height: 300px;
+    background: rgb(200, 219, 246);
+
+}
+          
+.modal-show {
+    opacity: 1;
+    pointer-events: auto;
+}
+          
+
+        
