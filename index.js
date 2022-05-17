@@ -2,6 +2,8 @@ const express = require('express');
 const app=express();
 const porta=process.env.port;
 const bodyParser = require('body-parser');
+const req = require('express/lib/request');
+const res = require('express/lib/response');
 
 app.get('/',(req,res)=>{
     res.sendfile(__dirname + '/index.html');
@@ -45,10 +47,11 @@ app.get('/js/cadastro.js', function(req, res){
 });
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.post('/',(req,res)=>{
-    console.log(req.body.loginAdd-KdsRootKey);
-    res.sendfile(__dirname + '/index.html');
-})
 
+app.post('/',(req,res)=>{
+    console.log(req.body.login);
+    res.sendfile(__dirname + '/index.html');
+
+})
 
 app.listen(porta || 3000,()=>{console.log('Servidor Funcionando')});
