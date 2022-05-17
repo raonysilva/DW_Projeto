@@ -4,12 +4,11 @@
 	<title>Formulário</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<script src="js/index.js"></script>
+	<script src="js/init.js"></script>
 
 
 </head>
 <body>
-
 <div class="container-fluid">
 	<div class="row justify-content-center mt-5">
 		<section class="col-12 colsm-6 col-md-4">
@@ -17,7 +16,7 @@
 			<form class="form-container">
 				<h4 class="text-center mt-4">Login</h4>
 				<div class="form-group">
-					<input type="text"  class="form-control" name="nome" placeholder="Email">
+					<input type="text"  class="form-control" name="login" placeholder="Email">
 				</div>
 				
 				<div class="form-group">
@@ -30,8 +29,8 @@
                     <a href="url">Esqueceu Senha</a>
 
 				</div>
-				<button class="btn btn-primary btn-block" onclick="open_ip()">Entrar</button>
-                <button class="btn btn-primary btn-block" onclick="open_cadastro()">Cadastrar</button>
+				<button class="btn btn-primary btn-block" onclick="load_ip()">Entrar</button>
+                <button class="btn btn-primary btn-block" onclick="load_cadastro()">Cadastrar</button>
 
 			</form>
 		</section>
