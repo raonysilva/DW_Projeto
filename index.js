@@ -3,13 +3,6 @@ const app=express();
 const porta=process.env.port;
 const req = require('express/lib/request');
 const res = require('express/lib/response');
-//Json
-const jsonServer = require("json-server");
-const server = jsonServer.create();
-const router = jsonServer.router("db.joson");
-const middlewares = jsonServer.defaults();
-server.use(middlewares);
-server.use(router);
 
 //HTML
 app.get('/',(req,res)=>{
